@@ -1,0 +1,22 @@
+<div class="mt-3 row detail-content">
+  <div class="col col-main-inner ml-2">
+    <div class="mt-5" v-if="content">
+      <div @click="detailContentUser()" class="cursor-pointer">
+        <MiniProfile :userInfo="{lastName: content.userName, firstName: '', avatar: content.avatar, timePost: content.created_at}" :profileOptions="{iconSize: 50, timePost: true}" />
+      </div>
+      <p class="title-content font-weight-bold fs20 mt-4">{{ content.title }}</p>
+      <div class=" description-content font-weight-bold" v-html="content.description"></div>
+      <div class="image-content mb-3 mt-3" v-if="content.image">
+        <img :src="link_image_content + content.image">
+      </div>
+
+      <div class="content-content" v-html="content.content"></div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-3 content-related ml-2 mr-2 mt-5" v-if="contentRelated.length">
+    <div class="mb-3 content" v-for="content in contentRelated">
+      <span class="title-content-related fs14" @click="detailContent(content.id)">{{ content.title }}</span>
+    </div>
+  </div>
+</div>

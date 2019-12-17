@@ -1,0 +1,31 @@
+<div class="layout-blog">
+  <div class="sidebar">
+    <div class="inner">
+      <ul class="primary-menu">
+        <!--<li class="item-menu"><router-link to="/re/listUser">List User</router-link></li>-->
+        <!--<li class="item-menu"><router-link to="/re/adminUser">Admin User</router-link></li>-->
+        <!--<li class="item-menu"><router-link to="/re/listDepartment">List Department</router-link></li>-->
+        <!--<li class="item-menu"><router-link to="/re/addUser">Add User</router-link></li>-->
+        <!--<li class="item-menu"><router-link to="/co/listContent">List Content</router-link></li>-->
+        <!--<li class="item-menu"><router-link to="/co/adminContent">Admin Content</router-link></li>-->
+        <!--<li class="item-menu"><router-link to="/co/addContent">Add Content</router-link></li>-->
+
+        <li class="item-menu item-menu-collapse" v-b-toggle.collapse-setting-page><i class="fa fa-users"></i>Register</li>
+        <b-collapse id="collapse-setting-page" class="list-item-menu" visible>
+          <router-link to="/re/listUser"><b-card class="item-menu item-menu-card">List User</b-card></router-link>
+          <router-link to="/re/adminUser"><b-card class="item-menu item-menu-card">Admin User</b-card></router-link>
+          <router-link to="/re/listDepartment"><b-card class="item-menu item-menu-card">List Department</b-card></router-link>
+          <router-link to="/re/addUser"><b-card class="item-menu item-menu-card">Add User</b-card></router-link>
+
+        </b-collapse>
+        <li class="item-menu item-menu-collapse" v-b-toggle.collapse-setting-page-1><i class="far fa fa-list-alt"></i>Content</li>
+        <b-collapse id="collapse-setting-page-1" class="list-item-menu" visible>
+          <router-link to="/co/my-content"><b-card class="item-menu item-menu-card">My content</b-card></router-link>
+          <router-link to="/co/addContent"><b-card class="item-menu item-menu-card">Add Content</b-card></router-link>
+          <router-link to="/co/listContent"><b-card class="item-menu item-menu-card">List Content</b-card></router-link>
+          <router-link to="/co/adminContent"><b-card class="item-menu item-menu-card">Admin Content</b-card></router-link>
+        </b-collapse>
+      </ul>
+    </div>
+  </div>
+</div>

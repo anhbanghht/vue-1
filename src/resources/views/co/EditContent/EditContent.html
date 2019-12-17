@@ -1,0 +1,84 @@
+<div class="mt-3 col-main-inner">
+  <PageHeader :title="$t('CO.EDIT_CONTENT.PAGE_TITLE')" />
+
+  <table class="table table-bordered mt-4">
+    <tbody>
+    <tr>
+      <td>{{ $t('CO.EDIT_CONTENT.TITLE') }}</td>
+      <td :class="{'has-danger': errors.has('title')}">
+        <span v-show="errors.has('title')" class="text-danger">{{ errors.first('title') }}</span>
+        <input type="text" class="form-control" :placeholder="$t('CO.EDIT_CONTENT.PLACE_TITLE')" v-model="content.title" v-validate="'required|max:150'" name="title" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>{{ $t('CO.EDIT_CONTENT.DESCRIPTION') }}</td>
+      <td :class="{'has-danger': errors.has('description')}">
+        <span v-show="errors.has('description')" class="text-danger">{{ errors.first('description') }}</span>
+        <textarea class="form-control" rows="5" :placeholder="$t('CO.EDIT_CONTENT.PLACE_DESCRIPTION')" v-model="content.description" v-validate="'required'" name="description" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>{{ $t('CO.EDIT_CONTENT.PUBLIC') }}</td>
+      <td>
+        <b-form-radio-group id="radio-group-1" v-model="content.public" name="radio-sub-component">
+          <b-form-radio :value="PublicContent.PRIVATE">{{ $t('CO.EDIT_CONTENT.PRIVATE') }}</b-form-radio>
+          <b-form-radio :value="PublicContent.PUBLIC">{{ $t('CO.EDIT_CONTENT.PUBLIC') }}</b-form-radio>
+        </b-form-radio-group>
+      </td>
+    </tr>
+
+    <tr>
+      <td>{{ $t('CO.EDIT_CONTENT.HASH_TAG') }}</td>
+      <td :class="{'has-danger': errorHashTag}">
+        <span v-show="errorHashTag" class="text-danger">{{ $t('CO.ADD_CONTENT.MSG.HASH_TAG') }}</span>
+        <v-select class="hash-tag-content" :filterable="false" @search="onSearchHashTag" :multiple="true"
+                  :clearable="false" maxHeight="50px"
+                  @input="setSelected"
+                  label="hash_tag"
+                  :options="listHashTag"
+                  :value="content.hash_tag">
+
+          <template slot="no-options">
+            {{ $t('CO.EDIT_CONTENT.MSG.HASH_TAG_NO_OPTION') }}
+          </template>
+
+          <template slot="option" slot-scope="u">
+            {{ u.hash_tag }}
+          </template>
+
+          <template slot="selected-option" slot-scope="u">
+            {{ u.hash_tag }}
+          </template>
+        </v-select>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>{{ $t('CO.EDIT_CONTENT.IMAGE') }}</td>
+      <td>
+        <ImageCropper :imageCropperOptions="{id:'imageCropper',type:'card', typeImageCropper: TypeImageCropper.CONTENT}" :imageUrl="content.image" :checkValidate="checkValidate" @imageContent="saveContent($event)"></ImageCropper>
+      </td>
+    </tr>
+
+    <tr>
+      <td>{{ $t('CO.EDIT_CONTENT.CONTENT') }}</td>
+      <td>
+        <vue-editor v-model="content.content" :useCustomImageHandler="true" @image-added="imageAdded" @image-removed="imageRemoved"></vue-editor>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div>
+
+
+  </div>
+
+  <div class="col-3 offset-9 text-right my-3">
+    <button @click="checkValidateContent()" class="btn btn-sm btn-info">Save Content</button>
+  </div>
+
+</div>

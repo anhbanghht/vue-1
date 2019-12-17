@@ -1,0 +1,20 @@
+@import './../../../../assets/style/import.scss';
+
+.login-form {
+  width: 500px;
+  border: 1px solid #eceeef;
+  padding: 1.5rem 1.5rem;
+}
+
+.row-login {
+  margin-bottom: 1rem;
+  .name {
+    width: 130px;
+    text-align: left
+  }
+
+  .flex-login {
+    width: 100%;
+    text-align: left;
+  }
+}

@@ -1,0 +1,236 @@
+// font size
+.fs10 {
+  font-size: 0.625rem !important;
+}
+.fs11 {
+  font-size: 0.6875rem !important;
+}
+.fs12 {
+  font-size: 0.75rem !important;
+}
+.fs13 {
+  font-size: 0.8125rem !important;
+}
+.fs14 {
+  font-size: 0.875rem !important;
+}
+.fs15 {
+  font-size: 0.9375rem !important;
+}
+.fs16 {
+   font-size: 1rem !important;
+ }
+.fs17 {
+  font-size: 1.0625rem !important;
+}
+.fs18 {
+  font-size: 1.125rem !important;
+}
+.fs19 {
+  font-size: 1.1875rem !important;
+}
+.fs20 {
+  font-size: 1.25rem !important;
+}
+.fs21 {
+  font-size: 1.3126rem !important;
+}
+.fs22 {
+  font-size: 1.375rem !important;
+}
+.fs23 {
+  font-size: 1.4375rem !important;
+}
+.fs24 {
+  font-size: 1.5rem !important;
+}
+.fs25 {
+  font-size: 1.5625rem !important;
+}
+.fs26 {
+  font-size: 1.625rem !important;
+}
+.fs27 {
+  font-size: 1.6875rem !important;
+}
+.fs28 {
+  font-size: 1.75rem !important;
+}
+.fs29 {
+  font-size: 1.8125rem !important;
+}
+.fs30 {
+  font-size: 1.875rem !important;
+}
+
+@media (max-width: 991px) {
+  .side-menu {
+    left: -292px; }
+
+  .side-menu.side-menu-show {
+    left: 0; }
+}
+
+button:focus {
+  outline: 0;
+}
+
+.col-main-inner {
+  max-width: 1000px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+input.form-control, select.form-control {
+    height: 32px;
+    padding-left: 0.5rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.3125rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.has-danger {
+  .form-control {
+    border-color: #D21D29 !important;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// custom css time-picker
+.time-picker {
+  width: 6em !important;
+  .display-time {
+    width: 6em !important;
+    height: 32px !important;
+    text-align: center;
+    border-radius: 0.25rem;
+    color: #495057;
+  }
+  .dropdown {
+    //width: 6em;
+    .select-list {
+      //width: 6em;
+    }
+
+    ul.hours {
+      border-left: 1px solid #fff;
+    }
+
+    ul {
+      li.active, li.active:hover, li:not(.hint):not([disabled]):hover {
+        background: #007bff !important;
+      }
+    }
+  }
+  .clear-btn {
+    font-size: 1rem;
+  }
+}
+
+//mx-datepicker
+.mx-datepicker-sm, .mx-timepicker-sm {
+  .mx-datepicker {
+    .mx-input {
+      height: 32px;
+    }
+  }
+}
+.mx-datepicker {
+  .mx-input {
+    height: 38px;
+    font-size: 1rem;
+    padding: 0.3125rem 0.75rem;
+  }
+  .mx-icon-calendar {
+    display: none;
+  }
+}
+.has-danger {
+  .mx-datepicker {
+    .mx-input {
+      border-color: #D21D29 !important;
+    }
+  }
+}
+
+.mx-datepicker-sm {
+  .mx-datepicker {
+    width: 7.5rem !important;
+  }
+}
+  // css datepicker for type time
+.mx-timepicker-sm {
+  .mx-datepicker {
+    width: 5.5rem !important;
+  }
+}
+.mx-datepicker-content {
+  .mx-time {
+    width: 5.5rem !important;
+  }
+}
+
+// vue-select2
+.vs--searchable {
+  .vs__dropdown-menu {
+    border: 1px solid rgba(60,60,60,.26);
+    padding: 0px;
+
+    .vs__dropdown-option {
+      border-bottom: 1px solid rgba(60,60,60,.26);
+    }
+  }
+}
+.has-danger .vs__dropdown-toggle {
+  border-color: #D21D29 !important;
+}
+
+// hash-tag-content
+.hash-tag-content .vs__selected {
+  color: #F18D00;
+}
+.v-select {
+  .vs__search {
+    height: 28px !important;
+  }
+  .vs__no-options {
+    padding: 3px 0px;
+  }
+  .vs__dropdown-menu {
+    border: 1px solid rgba(60,60,60,.26);
+    padding: 0px;
+
+    .vs__dropdown-option {
+      border-bottom: 1px solid rgba(60,60,60,.26);
+    }
+  }
+}
+
+// custom-checkbox, custom-radio
+.custom-control {
+  .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #F18D00 !important;
+    background-color: #F18D00 !important;
+  }
+  .custom-control-label {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.image-cropper-container {
+  overflow: hidden;
+  height: 240px;
+  margin-bottom: 1rem;
+  line-height: 240px;
+  text-align: center;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC");
+  .image-cropper-picture-avatar {
+    cursor: pointer;
+    user-select: none;
+    width: 240px;
+    margin-bottom: 5px;
+  }
+  .image-cropper-picture-content {
+    cursor: pointer;
+    user-select: none;
+    width: 420px;
+    margin-bottom: 5px;
+  }
+}
+
+.image-cropper-btn-group-wrap {
+  text-align: center;
+}
+.image-cropper-inner-wrap-avatar .cropper-view-box, .image-cropper-inner-wrap-avatar .cropper-face  {
+  border-radius: 50%;
+  border: 1px solid #67D4F4;
+}
+.image-cropper-inner-wrap-content .cropper-view-box, .image-cropper-inner-wrap-content .cropper-face  {
+  border: 1px solid #67D4F4;
+}
+

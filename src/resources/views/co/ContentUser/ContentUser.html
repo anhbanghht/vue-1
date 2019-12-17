@@ -1,0 +1,42 @@
+<div class="mt-3 col-main-inner">
+  <PageHeader title="" />
+
+  <div id="content-user" class="mt-5" v-infinite-scroll="loadContentUser()" infinite-scroll-disabled="busy" infinite-scroll-distance="0">
+    <div class="item-content" v-for="(content, index) in contents">
+      <div class="d-flex justify-content-between content-header">
+        <MiniProfile :userInfo="{lastName: content.userName, firstName: '', avatar: content.avatar, timePost: content.created_at}" :profileOptions="{iconSize: 50, timePost: true}" />
+        <div>
+          <!--<i class="fa fa-sort-down fs24"></i>-->
+          <popover name="default">
+            <div slot="face">
+              <i class="fa fa-sort-down fs24"></i>
+            </div>
+            <div slot="content">
+              <ul>
+                <li><i class="fa fa-edit px-1"></i>Edit</li>
+                <li><i class="fa fa-trash px-1"></i>Remove</li>
+              </ul>
+            </div>
+          </popover>
+        </div>
+      </div>
+      <div class="content m-0 mt-3">
+        <!--<div class="image-content">-->
+          <!--<img @click="detailContent(content.id)" class="cursor-pointer" :src="link_image_content  + content.image" v-if="content.image">-->
+          <!--<img @click="detailContent(content.id)" class="cursor-pointer no-image" :src="link_image_content_default" v-if="!content.image">-->
+        <!--</div>-->
+        <p class="title-content font-weight-bold fs20">{{ content.title }}</p>
+        <span class="description-content" :class="'description-content-' + index">{{ content.description }}</span>
+        <div v-if="content.hash_tag.length > 0">
+          <span class="mr-2 content-hash-tag font-weight-bold" v-for="hash in content.hash_tag" @click="detailContentUser(hash.hash_tag)">{{hash.hash_tag}}</span>
+        </div>
+
+        <div v-if="content.showMore">
+          <div class="content-content mt-3" v-html="content.content"></div>
+        </div>
+      </div>
+      <span class="mt-3 content-show-more" @click="showMoreContent($event, index)">{{content.showMore ? $t('BTN.HIDE') : $t('BTN.SHOW_MORE') }}</span>
+    </div>
+  </div>
+
+</div>

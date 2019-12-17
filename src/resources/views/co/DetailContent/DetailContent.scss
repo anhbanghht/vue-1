@@ -1,0 +1,53 @@
+.detail-content {
+  .title-content {
+    font-family: "OpenSans-Bold",sans-serif;
+    //color: #555;
+    color: #e54e53;
+    text-transform: uppercase;
+    line-height: 22px;
+    //text-align: justify;
+  }
+  .create-at-content {
+    text-align: justify;
+    color: #888;
+  }
+  .description-content {
+    font-style: italic;
+    text-align: justify;
+  }
+
+  .image-content {
+    img {
+      max-width: 100% !important;
+    }
+  }
+
+  .content-content {
+    text-align: justify;
+
+    img {
+      max-width: 100% !important;
+    }
+  }
+
+  .content-related {
+    border: 1px solid #e4e6e8;
+    text-align: justify;
+    padding: 5px 5px;
+
+    .content {
+      max-height: 45px;
+      overflow: hidden;
+
+      .title-content-related {
+        color: #005999;
+        white-space: pre-wrap;
+
+        &:hover {
+          cursor: pointer;
+          color: #3af;
+        }
+      }
+    }
+  }
+}

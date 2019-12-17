@@ -1,0 +1,27 @@
+.admin-user {
+  .search-user {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .btn-status-user {
+    width: 72px;
+  }
+  .btn-status-user-visibility {
+    visibility: hidden;
+  }
+
+  .control-user {
+    .fa {
+      color: #71808e;
+      &:hover {
+        color: #6959a6;
+        cursor: pointer;
+      }
+    }
+    .fa-edit {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$base-font-size: 16px !default;
+$opes-symbol-color: #F18D00 !default;
+//$opes-symbol-color: #3FA9F5 !default;
+$base-layout-padding: 20px;
+$img-dir: './assets/img/';
+$navbar-height: 50px;
+$side-col-width: 292px;
+// Start with assigning color names to specific hex values.
+$white:  #fff;
+$black:  #000;
+$red:    #D21D29;
+$orange: #F18D00;
+$yellow: #ffd500;
+$green:  #7CBD45;
+$blue:   #004580;
+$teal:   #67D4F4;
+$pink:   #ff5b77;
+$purple: #613d7c;
+
+// Create grayscale
+$gray-dark:                 #292b2c;
+$gray:                      #464a4c;
+$gray-light:                #636c72;
+$gray-lighter:              #eceeef;
+$gray-lightest:             #f7f7f9;
+
+// px to rem
+@function _rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+

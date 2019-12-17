@@ -1,0 +1,13 @@
+@import './../../assets/style/import.scss';
+
+$face-icon-size: 25, 30, 40, 50, 55, 75, 76, 94;
+@each $size in $face-icon-size {
+  .face-icon-#{$size} {
+    width: #{$size}px;
+    height: #{$size}px;
+  }
+}
+
+.face-icon-bordered {
+  border: 1px solid $opes-symbol-color;
+}

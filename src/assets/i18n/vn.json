@@ -1,0 +1,89 @@
+{
+  "LOADING": "Loading",
+  "LOGIN": "login",
+  "LOGOUT": "Logout",
+  "HELLO": "{msg} ahihi en",
+  "HEADER": {
+    "PROFILE": "Profile",
+    "CHANGE_PASS": "Change password"
+  },
+  "BTN": {
+    "SEARCH": "Search",
+    "OK": "Ok",
+    "CANCEL": "Cancel"
+  },
+  "MSG": {
+    "ERROR": "Error",
+    "SUCCESS": "Success"
+  },
+  "ADD_USER": {
+    "SEARCH": {
+      "NAME": "Search user name | email"
+    }
+  },
+  "RE": {
+    "ADD_USER": {
+      "MSG": {
+        "ADD_USER_SUCCESS": "Add user success!",
+        "ADD_USER_FAIL": "Add user fail!"
+      }
+    },
+    "ADMIN_USER": {
+      "BLOCK_USER": "Block user?",
+      "MSG": {
+        "DELETE_USER_SUCCESS": "Delete user success!"
+      }
+    }
+  },
+  "CO": {
+    "ADD_CONTENT": {
+      "PAGE_TITLE": "Add Content",
+      "TITLE": "Title",
+      "DESCRIPTION": "Description",
+      "PUBLIC": "Public",
+      "PRIVATE": "Private",
+      "HASH_TAG": "Tag",
+      "IMAGE": "Image",
+      "CONTENT": "Content",
+      "PLACE_TITLE": "Please input title",
+      "PLACE_DESCRIPTION": "Please input description",
+      "PLACE_TAG": "Please input tag",
+      "MSG": {
+        "HASH_TAG": "HashTag not format",
+        "HASH_TAG_NO_OPTION": "Please input hashtag",
+        "ADD_CONTENT_SUCCESS": "Add content success!",
+        "ADD_CONTENT_FAIL": "Add content fail!"
+      }
+    },
+    "EDIT_CONTENT": {
+      "PAGE_TITLE": "Edit Content",
+      "TITLE": "Title",
+      "DESCRIPTION": "Description",
+      "PRIVATE": "Private",
+      "PUBLIC": "Public",
+      "HASH_TAG": "Tag",
+      "IMAGE": "Image",
+      "CONTENT": "Content",
+      "PLACE_TITLE": "Please input title",
+      "PLACE_DESCRIPTION": "Please input description",
+      "PLACE_TAG": "Please input tag",
+      "MSG": {
+        "HASH_TAG": "HashTag not format",
+        "HASH_TAG_NO_OPTION": "Please input hashtag"
+      }
+    },
+    "LIST_CONTENT": {
+      "TITLE": "List content"
+    },
+    "DETAIL_CONTENT": {
+      "TITLE": "Detail content"
+    },
+    "ADMIN_CONTENT": {
+      "TITLE": "Admin content",
+      "MSG": {
+        "REQUIRED_DATE": "Required",
+        "ERROR_DATE": "Error date validate"
+      }
+    }
+  }
+}

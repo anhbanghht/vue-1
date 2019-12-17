@@ -1,0 +1,9 @@
+.table {
+  text-align: left;
+
+  > tbody > tr > td {
+    &:nth-child(1) {
+      width: 120px;
+    }
+  }
+}

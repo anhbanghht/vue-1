@@ -1,0 +1,14 @@
+<div :class="['mini-profile', 'mini-profile-' + profileOptions.iconSize]">
+  <div class="mini-profile-avatar">
+    <FaceIcon :avatar="avatar" :iconSize="profileOptions.iconSize"/>
+  </div>
+  <div class="mini-profile-userinfo pl-2">
+    <p class="mini-profile-userinfo-main mb-0">
+      <span class="mini-profile-userinfo-name font-weight-bold">{{lastName}} {{firstName}}</span>
+    </p>
+    <p class="mini-profile-userinfo-sub mb-0">
+      <span class="mini-profile-userinfo-office-name" v-if="profileOptions.mail">{{mail}}</span>
+      <span class="mini-profile-userinfo-office-name" v-if="profileOptions.timePost">{{timePost}}</span>
+    </p>
+  </div>
+</div>

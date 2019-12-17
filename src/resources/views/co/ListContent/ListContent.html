@@ -1,0 +1,22 @@
+<div class="mt-3 col-main-inner">
+  <PageHeader :title="$t('CO.LIST_CONTENT.TITLE')" />
+
+  <div class="mt-5" id="list-content">
+    <div class="item-content" v-for="content in contents">
+      <div class="row">
+        <div class="image-content">
+          <img @click="detailContent(content.id)" class="cursor-pointer" :src="link_image_content  + content.image" v-if="content.image">
+          <img @click="detailContent(content.id)" class="cursor-pointer no-image" :src="link_image_content_default" v-if="!content.image">
+        </div>
+
+        <div class="ml-2 content">
+          <p class="title-content font-weight-bold fs20" @click="detailContent(content.id)">{{ content.title }}</p>
+          <div class="content-page">
+            {{ content.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

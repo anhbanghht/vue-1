@@ -1,0 +1,35 @@
+<div :id="imageCropperOptions.id" class="image-cropper-inner-wrap" :class="'image-cropper-inner-wrap-' + imageCropperOptions.typeImageCropper">
+  <div class="image-cropper-container">
+    <img :src="imagePath" class="image-cropper-picture" :class="'image-cropper-picture-' + imageCropperOptions.typeImageCropper" alt="Image" @click="onMouseClick($event)" @mouseover="onMouseOver()" @mouseout="onMouseOut()">
+  </div>
+  <div class="image-cropper-btn-group-wrap">
+    <div class="btn-group">
+      <label class="btn btn-secondary btn-upload mb-0" title="Image Upload">
+        <input type="file" class="sr-only image-cropper-upload" id="fileInput" @click="clickImport"  value=""  accept=".jpg,.jpeg,.png,.gif" @change="imageUpload($event)">
+        <span class="fa fa-upload"></span>
+      </label>
+      <button type="button" class="btn btn-secondary btn-round-zoom-in" :title="$t('IMAGE_CROPPER.IMAGE_ROUND_ZOOM_IN')" :disabled="btnsDisabledFlag" @click="imageRoundZoom($event, 15)">
+        <span class="fa fa-plus-circle"></span>
+      </button>
+      <button type="button" class="btn btn-secondary btn-round-zoom-out" :title="$t('IMAGE_CROPPER.IMAGE_ROUND_ZOOM_OUT')" :disabled="btnsDisabledFlag" @click="imageRoundZoom($event, -15)">
+        <span class="fa fa-minus-circle"></span>
+      </button>
+      <button type="button" class="btn btn-secondary btn-zoom-in" :title="$t('IMAGE_CROPPER.IMAGE_ZOOM_IN')" :disabled="btnsDisabledFlag" @click="imageZoomIn()">
+        <span class="fa fa-search-plus"></span>
+      </button>
+      <button type="button" class="btn btn-secondary btn-zoom-out" :title="$t('IMAGE_CROPPER.IMAGE_ZOOM_OUT')" :disabled="btnsDisabledFlag" @click="imageZoomOut()">
+        <span class="fa fa-search-minus"></span>
+      </button>
+      <button type="button" class="btn btn-secondary btn-rotate-left" :title="$t('IMAGE_CROPPER.IMAGE_ROTATE_LEFT')" :disabled="btnsDisabledFlag" @click="imageRotateLeft()">
+        <span class="fa fa-rotate-left"></span>
+      </button>
+      <button type="button" class="btn btn-secondary btn-rotate-right" :title="$t('IMAGE_CROPPER.IMAGE_ROTATE_RIGHT')" :disabled="btnsDisabledFlag" @click="imageRotateRight()">
+        <span class="fa fa-rotate-right"></span>
+      </button>
+      <button type="button" class="btn btn-secondary btn-destroy" :title="$t('IMAGE_CROPPER.IMAGE_DELETE')" :disabled="btnsDisabledFlag" @click="imageDelete($event)">
+        <span class="fa fa-remove"></span>
+      </button>
+    </div>
+    <p><small>{{$t('IMAGE_CROPPER.IMAGE_INFO')}}</small></p>
+  </div>
+</div>

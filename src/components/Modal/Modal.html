@@ -1,0 +1,64 @@
+<div class="modal" id="theModal" :class="dialog.type" tabindex="-1" role="modal" aria-labelledby="modalTitle" aria-hidden="true"
+     data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" :class="dialog.size" role="document">
+    <div class="modal-content" :style="{'overflow':'hidden'}" >
+      <!--head-->
+      <div class="modal-header">
+        <!--title-->
+        <template v-if="dialog.type">
+          <h5 class="modal-title" v-if="dialog.title">{{dialog.title}}</h5>
+        </template>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" v-if="dialog.closeButton">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--icon success-->
+      <div class="modal-icon modal-success modal-animate-success-icon" v-if="dialog.icon == 'success'">
+        <div class="modal-success-circular-line-left"></div>
+        <span class="modal-success-line-tip modal-animate-success-line-tip"></span>
+        <span class="modal-success-line-long modal-animate-success-line-long"></span>
+        <div class="modal-success-ring"></div>
+        <div class="modal-success-fix"></div>
+        <div class="modal-success-circular-line-right"></div>
+      </div>
+      <!--icon error-->
+      <div class="modal-icon modal-error modal-animate-error-icon" v-if="dialog.icon == 'error'">
+            <span class="modal-x-mark modal-animate-x-mark">
+              <span class="modal-x-mark-line-left"></span>
+              <span class="modal-x-mark-line-right"></span>
+            </span>
+      </div>
+      <!--icon warning-->
+      <div class="modal-icon modal-warning" v-if="dialog.icon == 'warning'">!</div>
+      <!--icon info-->
+      <div class="modal-icon modal-info" v-if="dialog.icon == 'info'">i</div>
+      <!--icon question-->
+      <div class="modal-icon modal-question" v-if="dialog.icon == 'question'">?</div>
+      <!--title-->
+      <template v-if="!dialog.type">
+        <h5 class="modal-title" v-if="dialog.title">{{dialog.title}}</h5>
+      </template>
+      <!--body-->
+      <div class="modal-body">
+        <p class="mb-0" v-if="dialog.message">{{dialog.message}}</p>
+        <div v-if="dialog.html" v-html="html"></div>
+        <!--<div #theBody></div>-->
+        <template v-if="dialog.componentType">
+          <component :is="dialog.componentType" :extraParams="dialog.extraParams"></component>
+        </template>
+      </div>
+      <!--footer-->
+      <div class="modal-footer">
+        <button v-if="dialog.positiveButton" id="positiveButton" type="button" class="btn btn-warning" @click="onClickPositive()"
+                :disabled="dialog.componentType === 'ModalCheckBox' && dialog.extraParams.disable">{{dialog.positiveButton}}
+        </button>
+        <button v-if="dialog.negativeButton" type="button" class="btn btn-secondary" data-dismiss="modal"
+                @click="onClickNegative()">{{dialog.negativeButton}}
+        </button>
+        <button v-if="dialog.otherButton" type="button" class="btn active btn-primary"
+                @click="onClickOther()">{{dialog.otherButton}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
